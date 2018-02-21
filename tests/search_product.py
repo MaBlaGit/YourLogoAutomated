@@ -13,7 +13,7 @@ class SearchProductTest(BaseSetup, unittest.TestCase):
         self.product_page = ProductPage(self.driver)
         self.data = data_provider.test_data_provider()
 
-    def test_search_product(self):
+    def test_check_if_product_was_added_th_the_cart(self):
         self.home_page.search_product(self.data.get("search_item"))
         self.home_page.search_button()
         self.product_page.select_product()
