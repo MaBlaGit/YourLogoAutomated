@@ -7,3 +7,9 @@ class HomePage(BaseSetup, WebDriverCustomClass):
 
     def search_product(self, searched_product):
         self.send_keys_to(home_page.get("searchFieldByID"), searched_product)
+
+    def search_button(self):
+        self.click_on_element(home_page.get("searchButtonByName"), "name")
+
+    def cart_button(self):
+        self.click_on_element(home_page.get("cartButtonCSSSelector"), "css")

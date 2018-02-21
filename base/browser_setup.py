@@ -1,4 +1,4 @@
 browser_setup = {
-    "browser": "chrome",
+    "browser": "firefox",
     "url": "http://automationpractice.com/index.php"
 }
