@@ -10,3 +10,7 @@ product_page = dict(
     productAddButtonByXpath="//span[contains(text(), 'Add to cart')]",
     modalWindowByXpath="//i[@class='icon-chevron-left left']"
 )
+
+shopping_cart = dict(
+    itemInTheCartByLinkText="Blouse"
+)
