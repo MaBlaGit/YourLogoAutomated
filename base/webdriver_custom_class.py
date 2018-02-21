@@ -28,6 +28,8 @@ class WebDriverCustomClass:
             return By.PARTIAL_LINK_TEXT
         elif locator_type == 'tag':
             return By.TAG_NAME
+        elif locator_type == 'link':
+            return By.LINK_TEXT
         else:
             raise Exception("Not supported locator!")
 
