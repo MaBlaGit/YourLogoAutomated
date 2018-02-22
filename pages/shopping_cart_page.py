@@ -5,5 +5,7 @@ from utilities.ui_map import shopping_cart
 
 class ShoppingCartPage(BaseSetup, WebDriverCustomClass):
 
-    def cart_products(self):
-        return self.get_elements(shopping_cart.get("itemInTheCartByLinkText"), "link")
+    def cart_products(self, item):
+        return self.get_elements(shopping_cart.get(item), "link")
+
+

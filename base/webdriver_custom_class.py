@@ -70,6 +70,14 @@ class WebDriverCustomClass:
         except:
             raise Exception("Element {0} is not visible".format(locator))
 
+    def hover_over_an_element(self, element, locator, locator_type="id"):
+        try:
+            hover = ActionChains(self.driver)
+            hover.move_to_element(element).perform()
+            self.is_element_visible(locator, locator_type).click()
+        except:
+            raise Exception("Element {0} is not visible".format(element))
+
     def scroll_into_view(self, locator, locator_type="id"):
         try:
             locator_type = locator_type.lower()

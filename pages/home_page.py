@@ -13,3 +13,9 @@ class HomePage(BaseSetup, WebDriverCustomClass):
 
     def cart_button(self):
         self.click_on_element(home_page.get("cartButtonCSSSelector"), "css")
+
+    def women_button(self):
+        self.hover_over_an_element_and_click_on(home_page.get("womenButtonByXpath"), "xpath")
+
+    def dresses_button_click_on(self):
+        self.click_on_element(home_page.get("dressesButtonByXpath"), "xpath")

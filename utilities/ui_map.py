@@ -1,7 +1,9 @@
 home_page = dict(
     searchFieldByID="search_query_top",
     searchButtonByName="submit_search",
-    cartButtonCSSSelector="a b"
+    cartButtonCSSSelector="a b",
+    dressesButtonByXpath="(//li//a[@class='sf-with-ul'])[4]",
+    womenButtonByXpath="//a[@title='Women']"
 )
 
 product_page = dict(
@@ -12,5 +14,18 @@ product_page = dict(
 )
 
 shopping_cart = dict(
-    itemInTheCartByLinkText="Blouse"
+    blouseItemInTheCartByLinkText="Blouse",
+    pinnedSummerDressByLinkText="Printed Summer Dress",
+    pinnedChiffonDress="Printed Chiffon Dress"
+)
+
+dresses_page = dict(
+    summerDressesImageButtonByXpath="(//a[@title='Summer Dresses'])[3]",
+    locateAllProductsByXpath="//div[@class='right-block']",
+    addProductsToCartByXpath="//a[@title='Add to cart']",
+
+    scrollIntoViewByXpath="//ul[@class='product_list grid row']",
+    hoverAllElementsByXpath="(//div[@class='right-block'])",
+    locateSelectedElementsByXpath="(//div[@class='right-block'])[{0}]",
+    productAddButtonByXpath="(//span[contains(text(), 'Add to cart')])[{0}]"
 )
