@@ -78,6 +78,18 @@ class WebDriverCustomClass:
         except:
             raise Exception("Element {0} is not visible".format(element))
 
+    def hover_over_first_element_click_on_second(self, *args):
+        locator_1, locator_type_1, locator_2, locator_type_2, locator_3, locator_type_3 = args
+        locator_type_1.lower()
+        locator_type_2.lower()
+        locator_type_3.lower()
+        main_button = self.get_element(locator_1, locator_type_1)
+        second_button = self.get_element(locator_2, locator_type_2)
+        third_element = self.get_element(locator_3, locator_type_3)
+        hover = ActionChains(self.driver)
+        hover.move_to_element(main_button).pause(1).move_to_element(second_button).pause(1).perform()
+        third_element.click()
+
     def scroll_into_view(self, locator, locator_type="id"):
         try:
             locator_type = locator_type.lower()

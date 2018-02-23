@@ -31,8 +31,10 @@ class SearchProductTest(BaseSetup, unittest.TestCase):
         self.dresses_page.summer_dresses_image_click_on()
         self.dresses_page.add_to_the_cart_all_products_in_the_category()
         self.home_page.cart_button()
-        self.assertEqual(self.shopping_cart_page.cart_products("pinnedSummerDressByLinkText")[0].text, "Printed Summer Dress")
-        self.assertEqual(self.shopping_cart_page.cart_products("pinnedSummerDressByLinkText")[1].text, "Printed Summer Dress")
+        self.assertEqual(self.shopping_cart_page.cart_products("pinnedSummerDressByLinkText")[0].text,
+                         "Printed Summer Dress")
+        self.assertEqual(self.shopping_cart_page.cart_products("pinnedSummerDressByLinkText")[1].text,
+                         "Printed Summer Dress")
 
     def tearDown(self):
         super(SearchProductTest, self).tearDown()

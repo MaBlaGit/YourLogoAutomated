@@ -11,6 +11,7 @@ class BaseSetup:
             self.driver = webdriver.Chrome()
         else:
             raise Exception("Selected browser not supported")
+        self.driver.delete_all_cookies()
         self.driver.maximize_window()
         self.driver.get(browser_setup["url"])
 
