@@ -7,5 +7,3 @@ class ShoppingCartPage(BaseSetup, WebDriverCustomClass):
 
     def cart_products(self, item):
         return self.get_elements(shopping_cart.get(item), "link")
-
-
